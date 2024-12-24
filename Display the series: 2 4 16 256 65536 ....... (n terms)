@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+void printSeries(int n) {
+    long long term = 2;  // Starting term of the series
+
+    printf("The series is: \n");
+    for (int i = 1; i <= n; i++) {
+        printf("%lld ", term);
+        term = term * term;  // Square the previous term to get the next term
+    }
+    printf("\n");
+}
+
+int main() {
+    int n;
+
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+
+    if (n <= 0) {
+        printf("Please enter a positive integer.\n");
+    } else {
+        printSeries(n);
+    }
+
+    return 0;
+}
