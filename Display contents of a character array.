@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+    // Define a character array (string)
+    char arr[] = "Hello, World!";
+
+    // Display the contents of the array
+    printf("The contents of the character array are: %s\n", arr);
+
+    return 0;
+}
