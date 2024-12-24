@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    char str[100];  // Declare a character array to hold the string
+
+    // Input a string from the user
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);  // Use fgets to input the string
+
+    // Display the entered string
+    printf("You entered: %s\n", str);
+
+    return 0;
+}
