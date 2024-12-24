@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int isPalindrome(const char *str) {
+    const char *start = str;                  // Pointer to the start of the string
+    const char *end = str + strlen(str) - 1;  // Pointer to the end of the string
+
+    while (start < end) {
+        if (tolower(*start) != tolower(*end)) {
+            return 0; // Not a palindrome
+        }
+        start++;
+        end--;
+    }
+    return 1; // It is a palindrome
+}
+
+int main() {
+    char str[100];
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+    
+    // Remove trailing newline character if present
+    size_t len = strlen(str);
+    if (str[len - 1] == '\n') {
+        str[len - 1] = '\0';
+    }
+
+    if (isPalindrome(str)) {
+        printf("\"%s\" is a palindrome.\n", str);
+    } else {
+        printf("\"%s\" is not a palindrome.\n", str);
+    }
+
+    return 0;
+}
