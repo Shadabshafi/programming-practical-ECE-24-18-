@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+void printSeries(int n) {
+    int term = 2;  // Starting term of the series
+
+    printf("The series is: \n");
+    for (int i = 1; i <= n; i++) {
+        printf("%d ", term);
+        term *= 2;  // Multiply by 2 to get the next term
+    }
+    printf("\n");
+}
+
+int main() {
+    int n;
+
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+
+    if (n <= 0) {
+        printf("
