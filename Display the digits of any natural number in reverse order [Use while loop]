@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int number, digit;
+
+    // Ask the user to input a natural number
+    printf("Enter a natural number: ");
+    scanf("%d", &number);
+
+    // Check if the number is a valid natural number
+    if (number < 0) {
+        printf("Please enter a positive number.\n");
+        return 1;
+    }
+
+    // Reverse the digits of the number using a while loop
+    printf("Digits in reverse order: ");
+    while (number > 0) {
+        digit = number % 10;  // Get the last digit
+        printf("%d", digit);   // Print the digit
+        number /=
