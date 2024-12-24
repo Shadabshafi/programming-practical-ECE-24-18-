@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    char str[100];  // Declare a character array to hold the string
+    int length = 0; // Variable to store the length of the string
+
+    // Input a string from the user
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);  // Use fgets to input the string
+
+    // Calculate the length of the string manually
+    while (str[length] != '\0') {
+        length++;  // Increment length for each character until null character is found
+    }
+
+    // Display the length of the string
+    printf("The length of the entered string is: %d\n", length);
+
+    return 0;
+}
