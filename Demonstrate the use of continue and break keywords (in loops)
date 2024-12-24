@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    printf("Demonstrating 'continue' and 'break' keywords:\n");
+
+    // Using 'continue' to skip even numbers
+    printf("Using 'continue' to skip even numbers:\n");
+    for (int i = 1; i <= 10; i++) {
+        if (i % 2 == 0) {
+            continue;  // Skip the even numbers
+        }
+        printf("%d ", i);  // Print only odd numbers
+    }
+    printf("\n");
+
+    // Using 'break' to stop when the number 7 is encountered
+    printf("Using 'break' to stop when the number 7 is encountered:\n");
+    for (int i = 1; i <= 10; i++) {
+        if (i == 7) {
+            break;  // Exit the loop when i is 7
+        }
+        printf("%d ", i);  // Print numbers from 1 to 6
+    }
+    printf("\n");
+
+    return 0;
+}
