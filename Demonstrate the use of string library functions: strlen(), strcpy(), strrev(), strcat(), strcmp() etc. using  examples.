@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>  // Include the string library
+
+int main() {
+    // Define and initialize strings
+    char str1[100] = "Hello, ";
+    char str2[] = "World!";
+    char str3[100];
+    char str4[] = "hello, world!";
+    char str5[] = "Hello, World!";
+
+    // 1. strlen() - Finds the length of a string
+    printf("Length of str1: %lu\n", strlen(str1));  // Prints length of "Hello, "
+
+    // 2. strcpy() - Copies one string to another
+    strcpy(str3, str1);  // Copy str1 to str3
+    printf("str3 after strcpy(str1): %s\n", str3);  // Prints "Hello, "
+
+    // 3. strrev() - Reverses the string (non-standard, supported by some compilers like Turbo C)
+    // If your compiler does not support strrev, you can write your own reverse function.
+    // Uncomment the next line if using a compiler that supports strrev.
+    // strrev(str1);
+    // printf("str1 after strrev(): %s\n", str1);  // Reversed string
+
+    // 4. strcat() - Concatenates (appends) one string to another
+    strcat(str1, str2);  // Append str2 to str1
+    printf("str1 after strcat(str2): %s\n", str1);  // Prints "Hello, World!"
+
+    // 5. strcmp() - Compares two strings
+    int result = strcmp(str4, str5);  // Compare str4 ("hello, world!") and str5 ("Hello, World!")
+    if (result == 0) {
+        printf("str4 and str5 are identical.\n");
+    } else if (result < 0) {
+        printf("str4 is less than str5.\n");
+    } else {
+        printf("str4 is greater than str5.\n");
+    }
+
+    return 0;
+}
