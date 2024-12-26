@@ -2,36 +2,36 @@
 #include <stdlib.h>
 
 int main() {
-    FILE *file;  // File pointer
+    FILE *file;  
     char filename[100];
     char text[1000];
 
-    // Ask the user for the filename
+    
     printf("Enter the name of the file to write into: ");
     scanf("%s", filename);
 
-    // Open the file in write mode
+    
     file = fopen(filename, "w");
 
-    // Check if the file can be opened
+    
     if (file == NULL) {
         printf("Error: Could not open file %s\n", filename);
         return 1;
     }
 
-    // Ask the user to enter text
+    
     printf("Enter text to write into the file (end with a blank line):\n");
 
-    // Clear input buffer
+    
     getchar();
 
     while (fgets(text, sizeof(text), stdin)) {
-        if (text[0] == '\n')  // Stop when a blank line is entered
+        if (text[0] == '\n') 
             break;
-        fputs(text, file);    // Write text to the file
+        fputs(text, file);   
     }
 
-    // Close the file
+    
     fclose(file);
 
     printf("Text has been written to the file %s successfully.\n", filename);
