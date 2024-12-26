@@ -3,11 +3,11 @@
 int main() {
     int choice;
 
-    // Input the user's choice
+    
     printf("Enter a number (1, 2, 3): ");
     scanf("%d", &choice);
 
-    // Use switch-case to display the appropriate greeting
+    
     switch(choice) {
         case 1:
             printf("Salaam\n");
