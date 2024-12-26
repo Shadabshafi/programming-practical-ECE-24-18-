@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    // Loop for each line
+    
     for(int i = 1; i <= 4; i++) {
-        // Loop to print stars in each line
+        
         for(int j = 1; j <= i; j++) {
             printf("*");
         }
-        // Move to the next line after each row of stars
+        
         printf("\n");
     }
     return 0;
