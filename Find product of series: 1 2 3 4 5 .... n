@@ -2,24 +2,24 @@
 
 int main() {
     int n;
-    long long product = 1; // Using long long to handle large products
+    long long product = 1;
 
-    // Taking input for the value of n
+    
     printf("Enter a positive integer: ");
     scanf("%d", &n);
 
-    // Checking if n is valid
+    
     if (n <= 0) {
         printf("Please enter a positive integer.\n");
         return 1;
     }
 
-    // Loop to calculate the product
+    
     for (int i = 1; i <= n; i++) {
         product *= i; // Multiply product by current number
     }
 
-    // Output the result
+    
     printf("The product of numbers from 1 to %d is: %lld\n", n, product);
 
     return 0;
