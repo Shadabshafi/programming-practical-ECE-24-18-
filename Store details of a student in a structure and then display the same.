@@ -1,6 +1,4 @@
 #include <stdio.h>
-
-// Define the structure for student
 struct Student {
     char name[50];
     int roll_no;
@@ -8,13 +6,12 @@ struct Student {
 };
 
 int main() {
-    // Declare a variable of type struct Student
+    
     struct Student student;
 
-    // Input student details
     printf("Enter student's name: ");
-    fgets(student.name, sizeof(student.name), stdin);  // Using fgets to allow spaces in name
-    // Remove the newline character left by fgets
+    fgets(student.name, sizeof(student.name), stdin);
+    
     student.name[strcspn(student.name, "\n")] = '\0';
 
     printf("Enter student's roll number: ");
@@ -23,7 +20,7 @@ int main() {
     printf("Enter student's marks: ");
     scanf("%f", &student.marks);
 
-    // Display student details
+    
     printf("\nStudent Details:\n");
     printf("Name: %s\n", student.name);
     printf("Roll Number: %d\n", student.roll_no);
