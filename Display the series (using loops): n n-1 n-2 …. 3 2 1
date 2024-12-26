@@ -3,15 +3,15 @@
 int main() {
     int n;
 
-    // Input the value of n
+    
     printf("Enter a number (n): ");
     scanf("%d", &n);
 
-    // Using a for loop to display the series from n to 1
+    
     for (int i = n; i >= 1; i--) {
         printf("%d ", i);
     }
 
-    printf("\n");  // Print a newline after the series
+    printf("\n");
     return 0;
 }
