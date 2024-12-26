@@ -3,13 +3,12 @@
 int main() {
     int n, i, j;
 
-    // Taking input for the value of n
+    
     printf("Enter the value of n: ");
     scanf("%d", &n);
 
-    // Loop for each number from 1 to n
     for(i = 1; i <= n; i++) {
-        // Nested loop to print the number i, i times
+        
         for(j = 1; j <= i; j++) {
             printf("%d ", i);
         }
