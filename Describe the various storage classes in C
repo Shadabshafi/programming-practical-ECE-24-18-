@@ -1,4 +1,5 @@
 void function() {
-    auto int x = 10;  // Same as `int x = 10;`
+    auto int x = 10;
+        
     printf("%d\n", x);
 }
