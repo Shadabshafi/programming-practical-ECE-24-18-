@@ -1,46 +1,42 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Define the self-referential structure
-typedef struct Node {
+{
     int data;
-    struct Node* next;  // Pointer to the next node
+    struct Node* next; 
 } Node;
 
-// Function to create a new node
 Node* createNode(int data) {
-    Node* newNode = (Node*)malloc(sizeof(Node));  // Allocate memory for the new node
+    Node* newNode = (Node*)malloc(sizeof(Node));
     newNode->data = data;
-    newNode->next = NULL;  // Initialize the next pointer to NULL
+    newNode->next = NULL;  
     return newNode;
 }
 
-// Function to print the linked list
 void printList(Node* head) {
     Node* temp = head;
     while (temp != NULL) {
         printf("%d -> ", temp->data);
-        temp = temp->next;  // Move to the next node
+        temp = temp->next; 
     }
     printf("NULL\n");
 }
 
-// Main function
 int main() {
-    // Create nodes
+    
     Node* head = createNode(1);
     Node* second = createNode(2);
     Node* third = createNode(3);
 
-    // Link the nodes
-    head->next = second;  // Link first node to second
-    second->next = third; // Link second node to third
+    
+    head->next = second; 
+    second->next = third;
 
-    // Print the linked list
+
     printf("Linked list: ");
     printList(head);
 
-    // Free the allocated memory
+    
     free(head);
     free(second);
     free(third);
