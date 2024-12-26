@@ -1,22 +1,22 @@
 #include <stdio.h>
 
 int main() {
-    char str[100];  // Declare a character array to hold the string
+    char str[100];  
     int length = 0;
 
     
     printf("Enter a string: ");
-    fgets(str, sizeof(str), stdin);  // Use fgets to input the string
+    fgets(str, sizeof(str), stdin);  
 
-    // Calculate the length of the string
+    
     while (str[length] != '\0' && str[length] != '\n') {
-        length++;  // Increment length for each character until null or newline
+        length++;  
     }
 
-    // Display the string in reverse order
+
     printf("The reverse of the entered string is: ");
     for (int i = length - 1; i >= 0; i--) {
-        printf("%c", str[i]);  // Print each character in reverse order
+        printf("%c", str[i]);  
     }
 
     printf("\n");
