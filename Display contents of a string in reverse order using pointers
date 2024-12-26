@@ -2,7 +2,7 @@
 #include <string.h>
 
 void reverseString(const char *str) {
-    const char *ptr = str; // Pointer to the string
+    const char *ptr = str;
     
     
     while (*ptr != '\0') {
