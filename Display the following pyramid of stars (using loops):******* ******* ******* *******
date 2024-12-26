@@ -3,13 +3,13 @@
 int main() {
     int i, j;
 
-    // Outer loop for the number of rows (3 rows in this case)
+    
     for(i = 1; i <= 3; i++) {
-        // Inner loop for printing spaces before the stars
+        
         for(j = 1; j <= 3 - i; j++) {
             printf(" ");
         }
-        // Inner loop for printing stars with spaces in between
+    
         for(j = 1; j <= (2 * i - 1); j++) {
             if (j % 2 != 0) {
                 printf("*");
@@ -17,7 +17,7 @@ int main() {
                 printf(" ");
             }
         }
-        // Move to the next line after printing stars and spaces
+        
         printf("\n");
     }
 
