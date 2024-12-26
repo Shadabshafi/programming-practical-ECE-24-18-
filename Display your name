@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    // Display your name
+    
     printf("My name is Shadab shafi.\n");
     return 0;
 }
