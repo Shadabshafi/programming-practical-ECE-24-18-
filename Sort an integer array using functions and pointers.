@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-// Function to sort the array using pointers
+
 void sortArray(int *arr, int n) {
     int *i, *j, temp;
 
-    // Bubble sort using pointers
+    
     for (i = arr; i < arr + n - 1; i++) {
         for (j = i + 1; j < arr + n; j++) {
             if (*i > *j) {
-                // Swap the values
+                
                 temp = *i;
                 *i = *j;
                 *j = temp;
@@ -17,7 +17,7 @@ void sortArray(int *arr, int n) {
     }
 }
 
-// Function to display the array
+
 void displayArray(int *arr, int n) {
     for (int *ptr = arr; ptr < arr + n; ptr++) {
         printf("%d ", *ptr);
@@ -40,7 +40,7 @@ int main() {
     printf("Original array: ");
     displayArray(arr, n);
 
-    // Sort the array
+
     sortArray(arr, n);
 
     printf("Sorted array: ");
