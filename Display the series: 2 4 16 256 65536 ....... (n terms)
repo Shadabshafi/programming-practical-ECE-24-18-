@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 void printSeries(int n) {
-    long long term = 2;  // Starting term of the series
+    long long term = 2; 
 
     printf("The series is: \n");
     for (int i = 1; i <= n; i++) {
         printf("%lld ", term);
-        term = term * term;  // Square the previous term to get the next term
+        term = term * term;
     }
     printf("\n");
 }
