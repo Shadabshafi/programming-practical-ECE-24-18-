@@ -3,13 +3,13 @@
 int main() {
     int i, j;
 
-    // Outer loop for each line
+    
     for(i = 1; i <= 4; i++) {
-        // Inner loop for printing numbers in each line
+        
         for(j = 1; j <= i; j++) {
             printf("%d", j);
         }
-        // Move to the next line after printing numbers
+    
         printf("\n");
     }
 
